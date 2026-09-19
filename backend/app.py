@@ -143,8 +143,16 @@ st.markdown("""
 # 3. DATABASE & SESSION STATE INITIALIZATION
 # ==========================================
 def get_db_url():
-    return st.secrets.get("DATABASE_URL", os.environ.get("DATABASE_URL"))
-
+    # 1. Check environment variables first (used in Render)
+    db_url = os.environ.get("DATABASE_URL")
+    if db_url:
+        return db_url
+    
+    # 2. Fallback to Streamlit secrets (used in Streamlit Cloud / local dev)
+    try:
+        return st.secrets.get("DATABASE_URL")
+    except Exception:
+        return None
 def get_db_connection():
     db_url = get_db_url()
     if HAS_PSYCOPG2 and db_url:
