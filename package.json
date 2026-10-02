@@ -6,9 +6,28 @@
     "frontend"
   ],
   "scripts": {
+<<<<<<< HEAD
     "dev": "npm run dev -w frontend",
     "build": "npm run build -w frontend",
     "start": "npm run start -w frontend",
     "lint": "npm run lint -w frontend"
+=======
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harshavardhan662005/agricontact-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/harshavardhan662005/agricontact-app/issues"
+  },
+  "homepage": "https://github.com/harshavardhan662005/agricontact-app#readme",
+  "dependencies": {
+    "lucide-react": "^1.50.0"
+>>>>>>> ac8ecf3 (Update frontend UI with modern design)
   }
 }
